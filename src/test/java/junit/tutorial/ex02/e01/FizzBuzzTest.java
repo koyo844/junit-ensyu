@@ -2,6 +2,9 @@ package junit.tutorial.ex02.e01;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,6 +23,7 @@ class FizzBuzzTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
+		
 	}
 
 	@AfterEach
@@ -27,8 +31,12 @@ class FizzBuzzTest {
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void array() {
+		FizzBuzz fb = new FizzBuzz();//なぜこれをしてうまくいくのか分からない（FizzBuzz.createFizzBuzzList(16)だとエラーでた）
+		List<String> expected = Arrays.asList("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz","16");
+		List<String> actual = fb.createFizzBuzzList(16);
+		assertEquals(expected,actual,"失敗");
+		assertIterableEquals(expected, actual);
 	}
 
 }
