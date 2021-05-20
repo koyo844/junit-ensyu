@@ -5,7 +5,7 @@ import java.util.List;
 
 public class FizzBuzz {
 	
-	public List<String> createFizzBuzzList(int num) {
+	public static List<String> createFizzBuzzList(int num) {
 		List<String> result = new ArrayList<>();
 		for (int i = 1; i <= num; i++) {
 			if (i % 3 == 0 && i % 5 == 0) {

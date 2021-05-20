@@ -2,15 +2,15 @@ package junit.tutorial.ex02.e04;
 
 public class Range {
 
-	private double min;
-	private double max;
+	private static double min;
+	private static double max;
 
 	public Range(double min, double max) {
 		this.min = min;
 		this.max = max;
 	}
 	
-	public boolean contains(double value) {
+	public static boolean contains(double value) {
 		return min <= value && value <= max;
 	}
 

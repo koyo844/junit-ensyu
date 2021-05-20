@@ -32,9 +32,9 @@ class FizzBuzzTest {
 
 	@Test
 	void array() {
-		FizzBuzz fb = new FizzBuzz();//なぜこれをしてうまくいくのか分からない（FizzBuzz.createFizzBuzzList(16)だとエラーでた）
+		//FizzBuzz fb = new FizzBuzz();//なぜこれをしてうまくいくのか分からない（FizzBuzz.createFizzBuzzList(16)だとエラーでた）
 		List<String> expected = Arrays.asList("1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz","16");
-		List<String> actual = fb.createFizzBuzzList(16);
+		List<String> actual = FizzBuzz.createFizzBuzzList(16);
 		assertEquals(expected,actual,"失敗");
 		assertIterableEquals(expected, actual);
 	}
